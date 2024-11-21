@@ -8,7 +8,7 @@ export const mintText = [
 ];
 
 //header image in the ui. replace with your own
-export const image = "https://i.imgur.com/S4TE6RE.png";
+export const image = "https://i.imgur.com/env6DyH.png";
 
 //website title
 export const headerText = "";
