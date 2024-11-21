@@ -55,7 +55,7 @@ const Traits = ({ metadata }: TraitsProps) => {
 
   return (
     <>
-      <Divider marginTop={"15px"} />
+      <Divider marginTop={"px"} />
       <SimpleGrid marginTop={"15px"} columns={3} spacing={5}>
         {traitList}
       </SimpleGrid>

@@ -95,7 +95,7 @@ export const guardChecker = async (
         guardReturn.push({
           label: eachGuard.label,
           allowed: false,
-          reason: "Wallet does not exist. Do you have SOL?",
+          reason: "Insufficient SOL",
           maxAmount: 0
         });
       }
@@ -153,7 +153,7 @@ export const guardChecker = async (
         guardReturn.push({
           label: eachGuard.label,
           allowed: false,
-          reason: "Wallet not allowlisted",
+          reason: "Your wallet is not whitelisted",
           maxAmount: 0
         });
         console.info(`Guard ${eachGuard.label} wallet not allowlisted!`);
@@ -185,7 +185,7 @@ export const guardChecker = async (
         guardReturn.push({
           label: eachGuard.label,
           allowed: false,
-          reason: "Not enough SOL",
+          reason: "Insufficient SOL",
           maxAmount: 0
         });
         console.info(
@@ -311,7 +311,7 @@ export const guardChecker = async (
         guardReturn.push({
           label: eachGuard.label,
           allowed: false,
-          reason: "Not enough SOL!",
+          reason: "Insufficient SOL",
           maxAmount: 0
         });
         console.info(`${eachGuard.label} SolPayment not enough SOL!`);

@@ -540,8 +540,8 @@ export function ButtonList({
   }
 
   const listItems = buttonGuardList.map((buttonGuard, index) => (
-    <Box key={index} marginTop={"20px"}>
-      <Divider my="10px" />
+    <Box key={index} marginTop={"2px"}>
+      <Divider my="20px" />
       <HStack>
         <Heading size="xs" textTransform="uppercase">
           {buttonGuard.header}
@@ -579,29 +579,12 @@ export function ButtonList({
             )}
         </Flex>
       </HStack>
-      <SimpleGrid columns={2} spacing={5}>
+      <SimpleGrid columns={1} spacing={0}>
         <Text pt="2" fontSize="sm">
           {buttonGuard.mintText}
         </Text>
         <VStack>
-          {process.env.NEXT_PUBLIC_MULTIMINT && buttonGuard.allowed ? (
-            <NumberInput
-              value={numberInputValues[buttonGuard.label] || 1}
-              min={1}
-              max={buttonGuard.maxAmount < 1 ? 1 : buttonGuard.maxAmount}
-              size="sm"
-              isDisabled={!buttonGuard.allowed}
-              onChange={(valueAsString, valueAsNumber) =>
-                handleNumberInputChange(buttonGuard.label, valueAsNumber)
-              }
-            >
-              <NumberInputField />
-              <NumberInputStepper>
-                <NumberIncrementStepper />
-                <NumberDecrementStepper />
-              </NumberInputStepper>
-            </NumberInput>
-          ) : null}
+
 
           <Tooltip label={buttonGuard.tooltip} aria-label="Mint button">
             <Button
@@ -612,7 +595,7 @@ export function ButtonList({
                   candyMachine,
                   candyGuard,
                   ownedTokens,
-                  numberInputValues[buttonGuard.label] || 1,
+                  1,
                   mintsCreated,
                   setMintsCreated,
                   guardList,
@@ -623,7 +606,7 @@ export function ButtonList({
               }
               key={buttonGuard.label}
               size="sm"
-              backgroundColor="teal.100"
+              backgroundColor="orange.300"
               isDisabled={!buttonGuard.allowed}
               isLoading={
                 guardList.find((elem) => elem.label === buttonGuard.label)

@@ -207,18 +207,19 @@ export default function Home() {
        }
    `}
         </style>
-        <Card>
-          <CardHeader>
-            <Flex minWidth='max-content' alignItems='center' gap='2'>
+        <Card backgroundColor="orange.80" borderRadius="16px" border="none" p="5" shadow="none">
+        <CardHeader>
+            <Flex minWidth='max-content' alignItems='center' gap=''>
               <Box>
-                <Heading size='md'>{headerText}</Heading>
+                <Flex justifyContent="center" alignItems="center" mt="-20">
+                 <Heading size='md'>{headerText}</Heading>
+                </Flex>
               </Box>
               {loading ? (<></>) : (
                 <Flex justifyContent="flex-end" marginLeft="auto">
-                  <Box background={"teal.100"} borderRadius={"5px"} minWidth={"50px"} minHeight={"50px"} p={2} >
+                  <Box background={"white.100"} borderRadius={"0px"} minWidth={"0px"} minHeight={"0px"} p={0} >
                     <VStack >
-                      <Text fontSize={"sm"}>Available NFTs:</Text>
-                      <Text fontWeight={"semibold"}>{Number(candyMachine?.data.itemsAvailable) - Number(candyMachine?.itemsRedeemed)}/{Number(candyMachine?.data.itemsAvailable)}</Text>
+                      <Text fontSize={"sm"}></Text>
                     </VStack>
                   </Box>
                 </Flex>
@@ -230,11 +231,11 @@ export default function Home() {
             <Center>
               <Box
                 rounded={'lg'}
-                mt={-12}
+                mt={-20}
                 pos={'relative'}>
                 <Image
                   rounded={'lg'}
-                  height={230}
+                  height={380}
                   objectFit={'cover'}
                   alt={"project Image"}
                   src={image}

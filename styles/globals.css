@@ -12,22 +12,22 @@
     --foreground-rgb: 16, 24, 39;
     --secondary-foreground-rgb: 107, 114, 128;
 
-    --background-rgb: 243, 244, 246;
-    --secondary-background-rgb: 249, 250, 251;
+    --background-rgb: 255, 248, 233; /* Light orange */
+    --secondary-background-rgb: 255, 255, 255;
     --tertiary-background-rgb: 209, 213, 219;
     --hover-background-rgb: 243, 244, 246;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
-    --accent-rgb: 3, 255, 189;
+    --accent-rgb: 255, 255, 255;
     --darker-accent-rgb: 0, 204, 150;
     --on-accent-rgb: 0, 0, 0;
 
     --foreground-rgb: 255, 255, 255;
-    --secondary-foreground-rgb: 143, 143, 143;
+    --secondary-foreground-rgb: 255, 255, 255;
 
-    --background-rgb: 18, 18, 18;
+    --background-rgb: 255, 248, 233 !important; /* Light orange for light mode */
     --secondary-background-rgb: 27, 27, 27;
     --tertiary-background-rgb: 42, 42, 42;
     --hover-background-rgb: 42, 42, 42;
@@ -47,8 +47,8 @@ body {
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: rgb(var(--background-rgb));
+  color: rgb(var(--foreground-rgb)) !important;
+  background: rgb(var(--background-rgb)) !important; /* Background uses light orange */
 }
 
 a {
@@ -65,9 +65,9 @@ a {
 button.wallet-adapter-button-trigger {
   cursor: pointer;
   color: rgb(var(--foreground-rgb)) !important;
-  border: 1px solid rgb(var(--tertiary-background-rgb)) !important;
+  border: 0px solid rgb(var(--tertiary-background-rgb)) !important;
   border-radius: var(--border-radius) !important;
-  background-color: rgb(var(--secondary-background-rgb)) !important;
+  background-color: rgb(var(--background-rgb)) !important;
 }
 
 button.wallet-adapter-button-trigger:hover {

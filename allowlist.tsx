@@ -1,22 +1,21 @@
 //add your allowlists here. They need to be in the same format as you used to generate your merkle root. 
 //You can also add them here and copy the route from the console log 
 export const allowLists = new Map<string, Array<string>> ([
-    ["WL",
+    ["Head",
     [
-      "Tes1zkZkXhgTaMFqVgbgvMsVkRJpq4Y6g54SbDBeKVV",
-      "GjwcWFQYzemBtpUoN5fMAP2FZviTtMRWCmrppGuTthJS",
-      "AT8nPwujHAD14cLojTcB1qdBzA1VXnT6LVGuUd6Y73Cy"
+      "HestHarPSdXG2sKGsogkyhLeo9Tddof1k4iSKmAXDTHG",
+      "CV8DqUvYDWMByMN3P2SDi7ErajuhsDUo8gEfyVDZBRtJ"
     ]],
-    ["OG",
-    [
-      "Ur1CbWSGsXCdedknRbJsEk7urwAvu1uddmQv51nAnXB",
-      "GjwcWFQYzemBtpUoN5fMAP2FZviTtMRWCmrppGuTthJS",
-      "AT8nPwujHAD14cLojTcB1qdBzA1VXnT6LVGuUd6Y73Cy",
+    ["Public",
+      [
+        "6GVi2zyUDLYj1fPotMemwfzExevxMBofNEBYnKPhqj7h",
+        "Dbe9FwPWHPeYfpAECjeJtNdAWS5XsPgJR2AwgSG556WE", 
+        "9uprGfLKaJLTViRfCcNRenTCBGWQEQ7UUMvA4VD9wid3",
+        "5oLvKj8HDRLdwYsFq96wMKiYcGhmfDZSSSCQf1HNR7j8",
+        "AcYdwzjef2dPsF1Nw6k7a1Gh24PxXZK3uLEPMBB4ou4R"
     ]],
-    ["default",
-    [
-      "Tes1zkZkXhgTaMFqVgbgvMsVkRJpq4Y6g54SbDBeKVV",
-      "GjwcWFQYzemBtpUoN5fMAP2FZviTtMRWCmrppGuTthJS",
-      "AT8nPwujHAD14cLojTcB1qdBzA1VXnT6LVGuUd6Y73Cy"
+    ["All",
+      [
+        "HestHarPSdXG2sKGsogkyhLeo9Tddof1k4iSKmAXDTHG"
     ]],
 ]);
